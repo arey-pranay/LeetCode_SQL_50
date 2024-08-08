@@ -1,1 +1,8 @@
+#### 1757
 - SELECT product_id FROM Products WHERE low_fats='Y' AND recyclable='Y'
+
+#### 584
+- SELECT name FROM Customer WHERE (referee_id is null || referee_id!=2)
+
+#### 595
+-  SELECT name, population, area FROM World WHERE area >= 3000000 OR population >= 25000000
