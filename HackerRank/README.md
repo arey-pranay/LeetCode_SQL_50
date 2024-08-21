@@ -15,6 +15,6 @@ ORDER BY city LIMIT 1; \
 Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates. \
 SELECT Distinct City from Station Where city like "%a" OR city like "%e" OR city like "%i" OR city like "%o" OR city like "%u" 
 
-- 04, https://www.hackerrank.com/challenges/weather-observation-station-8/problem \
+- 04. https://www.hackerrank.com/challenges/weather-observation-station-8/problem \
   Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates. \
   SELECT DISTINCT city FROM station WHERE SUBSTRING(city, 1,1) IN ('a', 'e', 'i', 'o', 'u') AND SUBSTRING(city, length(city), 1) IN ('a', 'e', 'i', 'o', 'u');
