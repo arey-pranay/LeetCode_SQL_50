@@ -9,7 +9,12 @@ WHERE LENGTH(city) = ( SELECT MIN(LENGTH(city)) FROM station )
 ORDER BY city LIMIT 1;
 SELECT city, length(city)  FROM station
 WHERE LENGTH(city) = ( SELECT MAX(LENGTH(city)) FROM station )
-ORDER BY city LIMIT 1;
+ORDER BY city LIMIT 1; \
 
-Or
+- 03. https://www.hackerrank.com/challenges/weather-observation-station-7/problem \
+Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates. \
+SELECT Distinct City from Station Where city like "%a" OR city like "%e" OR city like "%i" OR city like "%o" OR city like "%u" 
 
+- 04, https://www.hackerrank.com/challenges/weather-observation-station-8/problem \
+  Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates. \
+  SELECT DISTINCT city FROM station WHERE SUBSTRING(city, 1,1) IN ('a', 'e', 'i', 'o', 'u') AND SUBSTRING(city, length(city), 1) IN ('a', 'e', 'i', 'o', 'u');
