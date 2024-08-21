@@ -18,3 +18,7 @@ SELECT Distinct City from Station Where city like "%a" OR city like "%e" OR city
 - 04. https://www.hackerrank.com/challenges/weather-observation-station-8/problem \
   Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates. \
   SELECT DISTINCT city FROM station WHERE SUBSTRING(city, 1,1) IN ('a', 'e', 'i', 'o', 'u') AND SUBSTRING(city, length(city), 1) IN ('a', 'e', 'i', 'o', 'u');
+
+- 05. https://www.hackerrank.com/challenges/more-than-75-marks \
+  Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID. \
+  Select name from Students where marks > 75 order by Substring(name,length(name)-2,3), id
