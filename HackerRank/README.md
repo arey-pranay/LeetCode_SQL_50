@@ -32,3 +32,23 @@ CASE
 END
 from BST
 ORDER BY n;
+
+- 07. https://www.hackerrank.com/challenges/the-pads/problem \
+SELECT 
+CASE 
+WHEN Occupation = 'Doctor' THEN concat(name,'(D)')
+WHEN Occupation = 'Actor' THEN concat(name,'(A)')
+WHEN Occupation = 'Singer' THEN concat(name,'(S)')
+ELSE concat(name,'(P)')
+END
+FROM OCCUPATIONS
+ORDER BY name;
+
+SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE occupation = 'Doctor'), ' doctors.');
+
+SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE occupation = 'Actor'), ' actors.');
+
+SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE occupation = 'Singer'), ' singers.');
+
+SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE occupation = 'Professor'), ' professors.');
+
