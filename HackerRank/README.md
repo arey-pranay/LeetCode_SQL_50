@@ -22,3 +22,13 @@ SELECT Distinct City from Station Where city like "%a" OR city like "%e" OR city
 - 05. https://www.hackerrank.com/challenges/more-than-75-marks \
   Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID. \
   Select name from Students where marks > 75 order by Substring(name,length(name)-2,3), id
+
+- 06. https://www.hackerrank.com/challenges/binary-search-tree-1/problem \
+SELECT
+CASE
+    WHEN p is null THEN concat(n,' Root')
+    WHEN n in (SELECT p from BST) THEN concat(n, ' Inner')
+    ELSE concat(n,'  Leaf')
+END
+from BST
+ORDER BY n;
