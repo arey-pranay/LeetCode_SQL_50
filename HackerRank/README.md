@@ -43,12 +43,8 @@ ELSE concat(name,'(P)')
 END
 FROM OCCUPATIONS
 ORDER BY name;
-
 SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE occupation = 'Doctor'), ' doctors.');
-
 SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE occupation = 'Actor'), ' actors.');
-
 SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE occupation = 'Singer'), ' singers.');
-
 SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE occupation = 'Professor'), ' professors.');
 
