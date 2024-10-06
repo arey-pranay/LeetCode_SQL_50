@@ -48,3 +48,16 @@ SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE 
 SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE occupation = 'Singer'), ' singers.');
 SELECT concat('There are a total of ' , (SELECT count(*) FROM occupations WHERE occupation = 'Professor'), ' professors.');
 
+- 08. https://www.hackerrank.com/challenges/the-report/problem
+Select concat(name, ' ', grade, ' ', marks)
+FROM Students as s 
+INNER JOIN Grades AS g ON (
+    ((s.marks DIV 10) * 10 = g.min_mark) OR 
+    (s.marks = g.max_mark)
+)
+WHERE grade >= 8
+order by grade desc, name;
+Select concat('NULL ', grade, ' ', marks)
+FROM Students as s INNER JOIN Grades as g on ((s.marks div 10) * 10) = g.min_mark
+WHERE grade < 8
+order by grade desc, marks
